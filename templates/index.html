@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+{% block main %}
+
+<style>
+th, td {
+  padding: 15px;
+}
+</style>
+    <table>
+        <tr>
+            <th>Stock</th>
+            <th>Shares</th>
+            <th>Current Price</th>
+            <th>Total value owned</th>
+            <th>Cash</th>
+            <th>Grand Total</th>
+        </tr>
+        {% if info %}
+            {% for x in info %}
+                <tr>
+                    <td>{{ x['stock'] }}</td>
+                    <td>{{ x['shares'] }}</td>
+                    <td>{{ x['current'] }}</td>
+                    <td>{{ x['currentT'] }}</td>
+            {% endfor %}
+        {% else %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        {% endif %}
+            <td>{{ cash }}</td>
+            <td>{{ total }}</td>
+        </tr>
+    </table>
+{% endblock %}

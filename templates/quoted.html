@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+<style>
+th, td {
+  padding: 15px;
+}
+</style>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Symbol</th>
+    </tr>
+    <tr>
+        <td>{{ info['name'] }}</td>
+        <td>{{ info['price'] }}</td>
+        <td>{{ info['symbol'] }}</td>
+    </tr>
+</table>
+{% endblock %}

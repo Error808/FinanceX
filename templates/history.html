@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<style>
+th, td {
+  padding: 15px;
+}
+</style>
+<table>
+    <tr>
+        <th>Stock</th>
+        <th>Price bought/sold</th>
+        <th>Shares bought/sold</th>
+        <th>Time when bought/sold</th>
+    </tr>
+    <tr>
+        {% if info %}
+            {% for x in info %}
+                <td>{{ x['stock'] }}</td>
+                <td>{{ x['price'] }}</td>
+                <td>{{ x['shares'] }}</td>
+                <td>{{ x['time'] }}</td>
+    </tr>
+            {% endfor %}
+        {% else %}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        {% endif %}
+
+</table>
+{% endblock %}
