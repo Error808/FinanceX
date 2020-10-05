@@ -1,2 +1,2 @@
-# Finance
-A stock-trading website.
+# FinanceX
+A stock-trading application.
